@@ -1,0 +1,38 @@
+
+import pygame as pg
+import sys
+pg.init()
+
+# Renkler
+siyah = 0, 0, 0
+beyaz = 255, 255, 255
+kirmizi = 255, 0, 0
+yesil = 0, 255, 0
+mavi = 0, 0, 255
+
+
+en , boy = 1000 , 700
+ekran = pg.display.set_mode( (en , boy) )
+ekran_en = ekran.get_width()
+ekran_boy = ekran.get_height()
+yazi_tipi = pg.font.SysFont('lucida' , 25 )
+yazi = yazi_tipi.render('EXİT', True , siyah)
+yazi_1 = yazi_tipi.render('EXİT', True ,beyaz)
+
+while True:
+    for event in pg.event.get():
+        mouse = pg.mouse.get_pos()
+        if event.type == pg.QUIT:
+            pg.quit()
+        if event.type == pg.MOUSEBUTTONDOWN:
+            if( ekran_en //20) <= mouse[0] <= ( ekran_en //20 ) + 50 and (ekran_boy//23) <= mouse[1] <= (ekran_boy//23) + 30 :
+                pg.quit()
+    pg.draw.rect( ekran, beyaz ,[int(ekran_en//20), int(ekran_boy//23) ,50,30] )
+    ekran.blit(yazi,[(ekran_en//20) + 5, (ekran_boy//23) + 3])
+    mouse = pg.mouse.get_pos()
+    if   ( ekran_en //20) <= mouse[0] <= ( ekran_en //20 ) + 50 and (ekran_boy//23) <= mouse[1] <= (ekran_boy//23) + 30 :
+        pg.draw.rect( ekran,kirmizi ,[ int(ekran_en//20), int(ekran_boy//23) ,50,30] )
+        ekran.blit(yazi_1,[(ekran_en/20) + 5, (ekran_boy/23) + 3])
+    pg.display.flip()
+
+
