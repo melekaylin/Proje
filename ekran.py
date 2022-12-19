@@ -10,6 +10,7 @@ yesil = 0, 255, 0
 mavi = 0, 0, 255
 
 ekran = pg.display.set_mode( (en , boy) )
+pg.display.set_caption("Işık ve Renkler")
 
 while True :
     for event in pg.event.get() :
