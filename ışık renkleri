@@ -1,0 +1,13 @@
+# Proje
+
+import pygame 
+import sys
+
+#RENKLER
+siyah = (0,0,0)
+kirmizi = (255,0,0)
+turuncu = (255,165,0)
+sari = (255,255,0)
+yeşil = (50,205,50)
+mavi = (0,0,255)
+mor = (160,32,240),
