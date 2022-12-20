@@ -1,0 +1,27 @@
+# Proje
+
+import pygame 
+import sys
+
+#RENKLERİN KARIŞIMLARI
+
+#IŞIK RENKLERİ
+kirmizi = (255,0,0)
+mavi = (0,0,255)
+yeşil = (50,205,50)
+siyah = (0,0,0)
+
+#KARIŞIMLARI
+(kirmizi*mavi = magenta(208,32,144))
+(kirmizi*yeşil = sari(255,255,0))
+(kirmizi*siyah = siyah(0,0,0))
+
+(mavi*kirmizi = magenta(208,32,144))
+(mavi*yeşil = cyan(0,255,255))
+(mavi*siyah = siyah(0,0,0))
+
+(yeşil*kirmizi = sari(255,255,0))
+(yeşil*mavi = cyan(0,255,255))
+(yeşil*siyah = siyah(0,0,0))
+
+(kirmizi*mavi*yeşil = beyaz(255,255,255))
