@@ -51,13 +51,8 @@ pygame.draw.ellipse(screen, beyaz, (15,210,100,40), 1)
 #Filtrelerin konumlandırılması
 mavi = (0,0,255)
 kirmizi = (255,0,0)
-yesil = (0,255,0)
-
-while True:
-    for i in pygame.event.get():
-        if i.type == pygame.QUIT:
-            sys.exit()
-
+yesil = (0,255,0)     
+            
     pygame.draw.ellipse(pencere, kirmizi, (600,150,60,120), 5)
     pygame.draw.ellipse(pencere, mavi, (600,270,60,120), 5)
     pygame.draw.ellipse(pencere, yesil, (600,390,60,120), 5)
@@ -104,11 +99,4 @@ while Warning:
         pygame.display.flip()   
 
 
-while True:
-    for i in pygame.event.get():
-        if i.type == pygame.QUIT:
-            sys.exit()
 
-    pygame.draw.ellipse(screen, beyaz, (100,100,165,80), 2)
-
-    pygame.display.flip()
