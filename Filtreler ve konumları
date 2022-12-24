@@ -1,0 +1,17 @@
+# Proje
+#Filtrelerin konumlandırılması
+
+mavi = (0,0,255)
+kirmizi = (255,0,0)
+yesil = (0,255,0)
+
+while True:
+    for i in pygame.event.get():
+        if i.type == pygame.QUIT:
+            sys.exit()
+
+    pygame.draw.ellipse(pencere, kirmizi, (600,150,60,120), 5)
+    pygame.draw.ellipse(pencere, mavi, (600,270,60,120), 5)
+    pygame.draw.ellipse(pencere, yesil, (600,390,60,120), 5)
+
+    pygame.display.flip()
