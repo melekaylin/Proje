@@ -1,0 +1,10 @@
+# Proje
+
+#Filtrelerin konumlandırılması
+beyaz = (255,255,255)
+
+
+pygame.draw.ellipse(pencere, beyaz, (550,180,80,300), 5)
+
+
+pygame.display.flip()
