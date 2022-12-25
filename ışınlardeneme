@@ -1,0 +1,51 @@
+# Proje
+#ışındeneme
+
+kirmizi = (255,0,0)
+yesil = (0,255,0)
+mavi = (0,0,255)
+
+
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,175))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,200))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,225))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,250))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,275))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,300))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,325))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,350))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,375))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,400))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,425))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,450))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,475))
+
+
+pygame.draw.aaline(pencere,yesil,(870,170),(560,200))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,225))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,250))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,275))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,300))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,325))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,350))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,375))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,400))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,425))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,450))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,475))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,500))
+
+
+pygame.draw.aaline(pencere,mavi,(900,550),(540,175))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,200))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,225))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,250))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,275))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,300))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,325))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,350))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,375))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,400))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,425))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,450))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,150))
