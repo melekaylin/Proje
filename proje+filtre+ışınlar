@@ -1,0 +1,156 @@
+# Proje
+#Tanımlamalar
+import pygame 
+import sys
+pygame.init()
+img = pygame.image.load('projeiçinfoto.png') #fotoğraf yüklemek için kodumuz
+img1 = pygame.image.load('ortadakielfeneri.png')
+img2 = pygame.image.load('elfenerialttaki.png')
+img3 = pygame.image.load('elfeneriüstteki.png')
+pencere = pygame.display.set_mode((1000,700), pygame.SWSURFACE) #pygame penceresine başlık attık
+pygame.display.set_caption("Işıklar Ve Renkler") 
+
+# Renkler
+siyah = (0,0,0)
+beyaz = (255,255,255)
+kirmizi = (255,0,0)
+yesil = (0,255,0)
+mavi = (0,0,255)
+gray = (176,176,176)
+
+#Ekran ve kadının konumlandırılması
+w , h = 1000 , 700
+screen = pygame.display.set_mode((w, h))
+screen.fill(gray)
+rect = img.get_rect()
+rect.center = w//4, h //2
+screen.blit(img, rect)
+
+rect = img1.get_rect()
+rect.center = w - 100, 350
+screen.blit(img1, rect)
+
+rect = img2.get_rect()
+rect.center = w - 100, 550
+screen.blit(img2, rect)
+
+rect = img3.get_rect()
+rect.center = w - 100, 150
+screen.blit(img3, rect)
+
+
+
+
+pygame.draw.ellipse(screen, beyaz, (165,80,165,70), 1) #kadının üstünde duran elips (x konumu, y konumu, x genişliği, y uzunluğu) ve çizginin kalınlığı. 
+pygame.draw.ellipse(screen, beyaz, (65,150,125,50), 1) 
+pygame.draw.ellipse(screen, beyaz, (15,210,100,40), 1) 
+
+
+ #Filtrelerin konumlandırılması
+beyaz = (255,255,255)
+
+
+pygame.draw.ellipse(pencere, beyaz, (550,180,80,300), 5)
+
+
+pygame.display.flip()
+
+#ışındeneme
+
+kirmizi = (255,0,0)
+yesil = (0,255,0)
+mavi = (0,0,255)
+
+
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,175))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,200))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,225))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,250))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,275))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,300))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,325))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,350))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,375))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,400))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,425))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,450))
+pygame.draw.aaline(pencere,kirmizi,(900,350),(540,475))
+
+
+pygame.draw.aaline(pencere,yesil,(870,170),(560,200))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,225))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,250))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,275))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,300))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,325))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,350))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,375))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,400))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,425))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,450))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,475))
+pygame.draw.aaline(pencere,yesil,(870,170),(560,500))
+
+
+pygame.draw.aaline(pencere,mavi,(900,550),(540,175))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,200))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,225))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,250))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,275))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,300))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,325))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,350))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,375))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,400))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,425))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,450))
+pygame.draw.aaline(pencere,mavi,(900,550),(540,150))
+
+#Exit tuşunun konumlandırılması
+w = screen.get_width()
+h = screen.get_height()
+yazi_tipi = pygame.font.SysFont('lucida' , 25 )
+yazi = yazi_tipi.render('EXİT', True , siyah)
+yazi_1 = yazi_tipi.render('EXİT', True ,beyaz)
+
+
+
+
+#Önce kadını oynatıp daha sonra exit tuşu daha içte olacak şekilde oynatıyoruz. 
+pygame.display.update()
+while Warning:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+            pygame.display.flip()
+            Warning = False
+
+
+
+#Tuşun son işlemleri
+    while True:
+        for event in pygame.event.get():
+            mouse = pygame.mouse.get_pos()
+            if event.type == pygame.QUIT:
+                pygame.quit()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if( w //20) <= mouse[0] <= ( w //20 ) + 50 and (h//23) <= mouse[1] <= (h//23) +30 :
+                    pygame.quit()
+        pygame.draw.rect( screen, beyaz ,[int(w//20), int(h//23) ,50,30] )
+        screen.blit(yazi,[(w//20) + 5, (h//23) + 5])
+        mouse = pygame.mouse.get_pos()
+        if   ( w //20) <= mouse[0] <= ( w //20 ) + 50 and (h//23) <= mouse[1] <= (h//23) +30 :
+            pygame.draw.rect( screen,kirmizi ,[ int(w//20), int(h//23) ,50,30] )
+            screen.blit(yazi_1,[(w/20) + 5, (h/23) + 3])
+        pygame.display.flip()   
+
+
+while True:
+    for i in pygame.event.get():
+        if i.type == pygame.QUIT:
+            sys.exit()
+
+    pygame.draw.ellipse(screen, beyaz, (100,100,165,80), 2)
+
+    pygame.display.flip()
