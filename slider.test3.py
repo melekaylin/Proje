@@ -71,7 +71,7 @@ while running :
     colour = [red_scroll,green_scroll,blue_scroll]
 
 
-    pygame.draw.rect(screen ,  colour, [255,255,150,50])
+    pygame.draw.ellipse(screen ,  colour, [50,100,200,90])
 
 
 
