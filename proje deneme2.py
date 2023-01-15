@@ -71,9 +71,9 @@ pygame.draw.ellipse(screen, beyaz, (15,210,100,40), 1)
 #  butonlar  için konumlandırma bloğu
 sprite_object = button(*screen.get_rect().center, (128, 128, 0))
 group = pygame.sprite.Group([
-    button(screen.get_width() *2 // 3 +250, (screen.get_height() // 3)+55, (128, 0, 0)), #kırmızı
-    button(screen.get_width() *2 // 3 +255, (screen.get_height() // 6)+5, (0, 128, 0)), #yeşil
-    button(screen.get_width() *2 // 3 +255, (screen.get_height() // 2)+150, (0, 0, 128)),  #mavi
+    button(screen.get_width() *2 // 3 +255, (screen.get_height() // 3)+120, (128, 0, 0)), #kırmızı
+    button(screen.get_width() *2 // 3 +255, (screen.get_height() // 6)+10, (0, 128, 0)), #yeşil
+    button(screen.get_width() *2 // 3 +255, (screen.get_height() // 2)+215, (0, 0, 128)),  #mavi
 
 ])
 
