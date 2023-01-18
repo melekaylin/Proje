@@ -1,0 +1,69 @@
+# Proje
+
+tumcizgiler=[]        #üretilen her bir ışını burada saklıyoruz ki sonra temizlemek mümkün olsun
+elipsvarmi=False      #ekranda ELIPS olup olmadığını anlamak
+
+gray=(176,176,176)
+yesil=(0,255,0)
+kirmizi=(255,0,0)
+mavi=(0,0,255)
+
+
+
+#Bu fonksiyon yeşil ışın çizer
+#Bunun için yesildeger isimli değişkene ihtiyaç duyar
+#En fazla 10 adet yeşil ışın çizebilmektedir.
+#Bu nedenle yesildeger değişkeninin 255/10 olan yaklaşık 25 arttırır
+#Işın çizimi bitince gider ve elipsin yeniden oluşmasını sağlar, çünkü değişen GREEN değerini yansıtmak gerek
+def yesilisinlar():
+    global elipsvarmi
+    if elipsvarmi:
+        global yesildeger
+        if yesildeger<250:
+            yesildeger+=25
+        print("Yeşil Işın Değeri:",yesildeger)
+        for i in range(yesildeger//25):
+            pygame.draw.aaline(screen,yesil,(860,300),(600,175+(25*i)))
+            cizgi=(860,300,600,175+(25*i))
+            tumcizgiler.append(cizgi)
+        
+        ellipseciz()
+
+#Bu fonksiyon Kırmızı ışın çizer
+#Bunun için kirmizideger isimli değişkene ihtiyaç duyar
+#En fazla 10 adet kırmızı ışın çizebilmektedir.
+#Bu nedenle kirmizideger değişkeninin 255/10 olan yaklaşık 25 arttırır
+#Işın çizimi bitince gider ve elipsin yeniden oluşmasını sağlar, çünkü değişen RED değerini yansıtmak gerek
+
+def kirmiziisinlar():
+    global elipsvarmi
+    if elipsvarmi:
+        global kirmizideger
+        if kirmizideger<250:
+            kirmizideger+=25
+        print("Kırmızı Işın Değeri:",kirmizideger)
+        for i in range(kirmizideger//25):
+            pygame.draw.aaline(screen,kirmizi,(860,120),(600,125+(25*i)))
+            cizgi=(860,120,600,125+(25*i))
+            tumcizgiler.append(cizgi)
+        ellipseciz()
+
+#Bu fonksiyon mavi ışın çizer
+#Bunun için mavideger isimli değişkene ihtiyaç duyar
+#En fazla 10 adet mavi ışın çizebilmektedir.
+#Bu nedenle yesildeger değişkeninin 255/10 olan yaklaşık 25 arttırır
+#Işın çizimi bitince gider ve elipsin yeniden oluşmasını sağlar, çünkü değişen BLUE değerini yansıtmak gerek
+
+def maviisinlar():
+    global elipsvarmi
+    
+    if elipsvarmi:
+        global mavideger
+        if mavideger<250:
+            mavideger+=25
+        print("MAvi Işın Değeri:",mavideger)
+        for i in range(mavideger//25):
+            pygame.draw.aaline(screen,mavi,(860,490),(600,225+(25*i)))
+            cizgi=(860,490,600,225+(25*i))
+            tumcizgiler.append(cizgi)
+        ellipseciz()
